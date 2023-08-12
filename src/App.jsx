@@ -61,7 +61,7 @@ export default function Home() {
         <div class="container px-4 px-lg-5">
           <a class="navbar-brand" href="#page-top">
             <img
-              src="src/assets/logo/x.svg"
+              src="./src/assets/logo/x.svg"
               alt="Logo"
               width="30"
               height="24"
