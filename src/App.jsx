@@ -77,7 +77,6 @@ export default function Home() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            Menu
             <i class="fas fa-bars"></i>
           </button>
 
@@ -112,14 +111,14 @@ export default function Home() {
       </nav>
 
       <header class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="container d-flex h-100 align-items-center justify-content-center">
           <div class="d-flex justify-content-center">
             <div class="text-center">
               <h1 class="mx-auto my-0 text-uppercase">ABIRDS ORIGIN</h1>
-              <h2>
+              <h6>
                 aBirds is a unique PFP collection of 1,000 hand-drawn birds on
                 the Arbitrum blockchain.
-              </h2>
+              </h6>
               <button class="btn btn-lg mint-now" type="button">
                 MINT NOW
               </button>
@@ -346,7 +345,7 @@ export default function Home() {
                   </div>
                   <div class="col-auto">
                     <button
-                      class="btn btn-primary disabled"
+                      class="btn btn-primary notify-me"
                       id="submitButton"
                       type="submit"
                     >
