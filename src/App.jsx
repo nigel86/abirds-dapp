@@ -1,26 +1,44 @@
 import {
   ConnectWallet,
+  Web3Button,
   useContract,
   useContractRead,
-  Web3Button,
   useAddress,
   useTotalCount,
   useTotalCirculatingSupply,
+  useClaimNFT,
 } from "@thirdweb-dev/react";
+import { useState } from "react";
 //import "./css/styles.css";
 import { ethers } from "ethers";
+
+function Profile() {
+  return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;
+}
 
 export default function Home() {
   const CONTRACT_ADDR = "0xc4640C25f08f5453883f8aA07C6Cdb8d57bdd6f5";
   const { contract } = useContract(CONTRACT_ADDR);
   const { data: totalSupply } = useContractRead(contract, "totalSupply");
 
-  const { data: totalCount, isLoading, error } = useTotalCount(contract);
-  const {
-    data: totalCirculatingSupply,
-    isLoading2,
-    error2,
-  } = useTotalCirculatingSupply(contract);
+  const address = useAddress(); // client address
+  const { data: totalCount } = useTotalCount(contract);
+  const { data: totalCirculatingSupply } = useTotalCirculatingSupply(contract);
+  const { mutate: claimNft } = useClaimNFT(contract);
+
+  const [mintCount, setMintCount] = useState(0);
+
+  function incrementMint() {
+    if (mintCount < 10) {
+      setMintCount((s) => s + 1);
+    }
+  }
+
+  function decrementMint() {
+    if (mintCount > 0) {
+      setMintCount((s) => s - 1);
+    }
+  }
 
   return (
     // <main className="main">
@@ -99,7 +117,7 @@ export default function Home() {
               </li>
             </ul>
             <ConnectWallet
-              theme="dark"
+              className="mint-now"
               btnTitle="Connect Wallet"
               dropdownPosition={{
                 side: "bottom",
@@ -119,30 +137,44 @@ export default function Home() {
                 aBirds is a unique PFP collection of 1,000 hand-drawn birds on
                 the Arbitrum blockchain.
               </h6>
-              <button class="btn btn-lg mint-now" type="button">
-                MINT NOW
-              </button>
-              <div class="container">
-                <h6>
-                  {totalCirculatingSupply?.toString()} /
-                  {totalSupply?.toString()} minted • 36d 5h 2m 54s
-                </h6>
+
+              <div class="row">
+                <div class="col">
+                  <button
+                    class="btn btn-outline-secondary in-btn"
+                    type="button"
+                    onClick={() => incrementMint()}
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                  <span>{mintCount}</span>
+                  <button
+                    class="btn btn-outline-secondary de-btn"
+                    type="button"
+                    onClick={() => decrementMint()}
+                  >
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+
+                  <Web3Button
+                    className="mint-now"
+                    contractAddress={CONTRACT_ADDR}
+                    action={() =>
+                      claimNft({
+                        to: address,
+                        quantity: mintCount,
+                      })
+                    }
+                  >
+                    Claim Now
+                  </Web3Button>
+                </div>
               </div>
-              <div class="container my-3">
-                <Web3Button
-                  contractAddress={CONTRACT_ADDR}
-                  action={async () => {
-                    await contract.call("lazyMint", [], {
-                      // value: ethers.utils.parseEther("0.01"),
-                    });
-                  }}
-                  onSuccess={() => {
-                    alert("lazyMint running");
-                  }}
-                >
-                  lazyMint
-                </Web3Button>
-              </div>
+
+              <h6>
+                {totalCirculatingSupply?.toString()} / {totalCount?.toString()}
+                minted • 36d 5h 2m 54s
+              </h6>
             </div>
           </div>
         </div>
