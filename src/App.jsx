@@ -58,7 +58,7 @@ export default function Home() {
         aria-label="nav"
         id="mainNav"
       >
-        <div class="container px-4 px-lg-5">
+        <div class="container px-lg-5">
           <a class="navbar-brand" href="#page-top">
             <img
               src="./src/assets/logo/x.svg"
