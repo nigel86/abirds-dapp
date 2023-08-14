@@ -26,7 +26,7 @@ export default function Home() {
   const { data: totalCirculatingSupply } = useTotalCirculatingSupply(contract);
   const { mutate: claimNft } = useClaimNFT(contract);
 
-  const [mintCount, setMintCount] = useState(0);
+  const [mintCount, setMintCount] = useState(1);
 
   function incrementMint() {
     if (mintCount < 10) {
@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   function decrementMint() {
-    if (mintCount > 0) {
+    if (mintCount > 1) {
       setMintCount((s) => s - 1);
     }
   }
