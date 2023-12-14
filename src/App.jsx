@@ -123,10 +123,9 @@ export default function Home() {
               id="mint-now"
               className="mint-now"
               btnTitle="Connect Wallet"
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
+              theme={"dark"}
+              switchToActiveChain={true}
+              modalSize={"wide"}
             />
           </div>
         </div>
@@ -136,10 +135,12 @@ export default function Home() {
         <div class="container d-flex h-100 align-items-center justify-content-center">
           <div class="d-flex justify-content-center">
             <div class="text-center">
-              <h1 class="mx-auto my-0 text-uppercase">ABIRDS ORIGIN</h1>
+              <h1 class="mx-auto my-0 text-uppercase">The xBirds</h1>
               <h6>
-                aBirds is a unique PFP collection of 1,000 hand-drawn birds on
-                the Arbitrum blockchain.
+                xBirds is a collection of 1,000 hand-drawn unique NFT birds
+                living on the Optimism blockchain. Your xBird grants access to
+                members-only experience and rewards. Future areas and perks can
+                be unlocked by the community through roadmap activation.
               </h6>
 
               <div class="row">
@@ -204,30 +205,36 @@ export default function Home() {
         </div>
       </header>
 
-      <section class="about-section text-center" id="about">
-        <div class="container px-4 px-lg-5">
-          <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="text-white mb-4">ABIRDS FAM</h2>
-              <p class="text-white-50">
-                BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
-                collectibles living on the Ethereum blockchain. Your Bored Ape
-                doubles as your Yacht Club membership card, and grants access to
-                members-only benefits, the first of which is access to THE
-                BATHROOM, a collaborative graffiti board. Future areas and perks
-                can be unlocked by the community through roadmap activation.
-                <br />
-                <br />
-                You can also check out the collection on Secondary Market like
-                <a href="https://opensea.io/collection/boredapeyachtclub">
-                  OpenSea
-                </a>
-                .
+      <section class="about-section" id="about">
+        <div class="container-fluid border border-white">
+          <div class="row justify-content-center border border-warning">
+            <div class="col-10 border border-info">
+              <h2 class="text-white my-5 text-center">The Tale of xBirds</h2>
+              <p class="text-white-50 my-5">
+                Once, the skies thrived with the vibrant 3Dbirds, symbols of joy
+                and unity. Yet, abandoned and forgotten, their world dimmed, and
+                their songs turned somber. Determined to transcend their
+                despair, they transformed into the xbirds, embracing thousands
+                of unique, shadowy forms. Veiled in darkness, each xbird
+                embodies resilience, shaped by trials but standing tall as a
+                testament to adaptation and diversity.
+              </p>
+              <p class="text-white-50 my-5">
+                These enigmatic xbirds soar through mysterious skies, a fusion
+                of darkness and empowerment. Their diverse forms echo stories of
+                transformation, inviting the world to celebrate change,
+                individuality, and strength amid adversity. Welcome to the realm
+                of the xbirds, where darkness intertwines with resilience, and
+                every silhouette tells a story of rebirth and reinvention.
               </p>
             </div>
           </div>
-          <img class="img-fluid" src="src/assets/img/ipad.png" alt="..." />
         </div>
+        <img
+          class="img-fluid"
+          src="src/assets/img/silhouettes-removebg-half.png"
+          alt="..."
+        />
       </section>
 
       <section class="projects-section bg-light" id="projects">
@@ -236,17 +243,18 @@ export default function Home() {
             <div class="col-xl-8 col-lg-7">
               <img
                 class="img-fluid mb-3 mb-lg-0"
-                src="src/assets/img/bg-masthead.jpg"
+                src="src/assets/img/castle.png"
                 alt="..."
               />
             </div>
             <div class="col-xl-4 col-lg-5">
               <div class="featured-text text-center text-lg-left">
-                <h4>Shoreline</h4>
+                <h4>Wings of Mystery</h4>
                 <p class="text-black-50 mb-0">
-                  Grayscale is open source and MIT licensed. This means you can
-                  use it for any project - even commercial projects! Download
-                  it, customize it, and publish your website!
+                  Amidst fog and ancient ruins, the xbirds, emblems of change
+                  and fortitude, sweep across the night sky. Their presence, a
+                  harmonious blend of mystery and might, echoes the silent
+                  strength found in the heart of bravery.
                 </p>
               </div>
             </div>
@@ -254,11 +262,7 @@ export default function Home() {
 
           <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
             <div class="col-lg-6">
-              <img
-                class="img-fluid"
-                src="src/assets/img/demo-image-01.jpg"
-                alt="..."
-              />
+              <img class="img-fluid" src="src/assets/img/sun.jpg" alt="..." />
             </div>
             <div class="col-lg-6">
               <div class="bg-black text-center h-100 project">
