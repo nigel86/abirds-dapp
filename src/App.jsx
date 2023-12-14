@@ -206,9 +206,9 @@ export default function Home() {
       </header>
 
       <section class="about-section" id="about">
-        <div class="container-fluid border border-white">
-          <div class="row justify-content-center border border-warning">
-            <div class="col-10 border border-info">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-10">
               <h2 class="text-white my-5 text-center">The Tale of xBirds</h2>
               <p class="text-white-50 my-5">
                 Once, the skies thrived with the vibrant 3Dbirds, symbols of joy
