@@ -99,7 +99,10 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+/* Apply Varela Round font to the entire page */
+body {
+  font-family: "Cinzel", sans-serif;
+}
 /*
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -188,7 +191,7 @@ body {
   background-color: #fff;
 }
 */
-.masthead {
+.masthead-section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -205,7 +208,8 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
-.masthead h1 {
+
+.masthead-section h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -216,8 +220,8 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.masthead h6,
-.masthead span {
+.masthead-section h6,
+.masthead-section span {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -233,13 +237,13 @@ body {
 }
 
 @media (min-width: 992px) {
-  .masthead h1 {
+  .masthead-section h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
   }
 }
 
-.masthead .mint-now {
+.masthead-section .mint-now {
   color: var(--bs-white) !important;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
@@ -247,47 +251,259 @@ body {
   background: var(--bs-primary) !important;
   padding: 1rem 2rem !important;
 }
-.masthead .in-btn,
-.masthead .de-btn {
+.masthead-section .in-btn,
+.masthead-section .de-btn {
   margin: 0 1rem;
 }
-.masthead span {
+.masthead-section span {
   margin: 0 1rem;
 }
 
-.about-section {
-  padding-top: 10rem;
+.story-section {
   background: linear-gradient(
     to bottom,
     #000 0%,
     rgba(0, 0, 0, 0.9) 75%,
-    rgba(0, 0, 0, 0.8) 100%
+    #000000cc 100%
   );
 }
-.about-section p {
-  margin-bottom: 5rem;
+
+.intro-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    #000000cc 100%
+  );
 }
 
-.projects-section {
-  padding: 10rem 0;
+.weapon-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    #000000cc 100%
+  );
 }
-.projects-section .featured-text {
-  padding: 2rem;
+
+.timeline-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    #000000cc 100%
+  );
 }
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+
+.timeline-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+@media (min-width: 768px) {
+  .timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #33a6bd;
+    width: 3.46rem;
+    position: absolute;
+    left: 7.5rem;
+    top: 0.3125rem;
+  }
+  .timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #33a6bd;
+    width: 3.8125rem;
+    position: absolute;
+    right: 7.5rem;
+    top: 0.3125rem;
   }
 }
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
+
+.timeline-steps .timeline-content {
+  width: 10rem;
+  text-align: center;
 }
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
+
+.timeline-steps .timeline-content .inner-circle {
+  border-radius: 1.5rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #33a6bd;
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+  content: "";
+  background-color: #33a6bd;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 6.25rem;
+  opacity: 0.5;
+}
+
+.faq-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    #000000cc 100%
+  );
+}
+
+.accordion-header button {
+  color: #ffffff; /* Text color for accordion headers */
+  background-color: var(
+    --bs-primary
+  ); /* Background color for accordion headers */
+}
+
+.accordion-body {
+  color: darkblue; /* Text color for accordion bodies */
+  background-color: var(--bs-primary); /* Reference to --bs-primary */
+}
+
+.team-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    #000000cc 100%
+  );
+}
+
+/*can delete social-info class related*/
+.profile {
+  position: relative;
+  margin-bottom: 50px;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  z-index: 1;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+.profile .profile_thumb {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+  margin: 0 auto;
+  padding: 15px 15px 0 15px;
+  background-color: darkslategrey;
+  overflow: hidden;
+}
+
+.profile .profile_thumb .social-info {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+  right: 30px;
+  text-align: right;
+}
+.profile .profile_thumb .social-info a {
+  font-size: 14px;
+  color: #020710;
+  padding: 0 5px;
+}
+.profile .profile_thumb .social-info a:hover,
+.profile .profile_thumb .social-info a:focus {
+  color: #3f43fd;
+}
+.profile .profile_thumb .social-info a:last-child {
+  padding-right: 0;
+}
+.profile .profile-detail {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  text-align: right;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  border-radius: 0 0 15px 15px;
+  background-color: darkslategray;
+}
+.profile .profile-detail::after {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 3px;
+  background-color: var(--bs-primary);
+  content: "";
+  top: 12px;
+  right: 30px;
+}
+.profile .profile-detail h6 {
+  margin-bottom: 0.25rem;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .profile .profile-detail h6 {
+    font-size: 14px;
   }
+}
+.profile .profile-detail p {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .profile .profile-detail p {
+    font-size: 12px;
+  }
+}
+.profile:hover .profile_thumb::after,
+.profile:focus .profile_thumb::after {
+  background-color: #070a57;
+}
+.profile:hover .profile_thumb .social-info a,
+.profile:focus .profile_thumb .social-info a {
+  color: #ffffff;
+}
+.profile:hover .profile_thumb .social-info a:hover,
+.profile:hover .profile_thumb .social-info a:focus,
+.profile:focus .profile_thumb .social-info a:hover,
+.profile:focus .profile_thumb .social-info a:focus {
+  color: #ffffff;
+}
+.profile:hover .profile-detail,
+.profile:focus .profile-detail {
+  background-color: #070a57;
+}
+.profile:hover .profile-detail::after,
+.profile:focus .profile-detail::after {
+  background-color: #ffffff;
+}
+.profile:hover .profile-detail h6,
+.profile:focus .profile-detail h6 {
+  color: #ffffff;
+}
+.profile:hover .profile-detail p,
+.profile:focus .profile-detail p {
+  color: #ffffff;
 }
 
 .signup-section {
@@ -317,74 +533,7 @@ body {
   border: 0;
 }
 
-.contact-section {
-  padding-top: 5rem;
-}
-.contact-section .card {
-  border: 0;
-  border-bottom: 0.25rem solid #64a19d;
-}
-.contact-section .card h4,
-.contact-section .card .h4 {
-  font-size: 0.8rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
-.contact-section .card hr {
-  opacity: 1;
-  border-color: #64a19d;
-  border-width: 0.25rem;
-  width: 3rem;
-}
-.contact-section .social {
-  margin-top: 5rem;
-}
-.contact-section .social a {
-  text-align: center;
-  height: 3rem;
-  width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-  line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
-}
-.contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
-}
-.contact-section .social a:active {
-  color: #fff;
-}
-
-.roadmap-section {
-  padding: 10rem 0;
-}
-
-.roadmap-section .live-text {
-  color: var(--bs-green) !important;
-}
-
-.roadmap-section .soon-text {
-  color: var(--bs-info) !important;
-}
-
-.notify-me {
-  color: var(--bs-white);
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.signup-section .notify-me {
   background: var(--bs-primary);
   padding: 1rem 2rem;
-}
-
-.footer {
-  padding: 2rem 0;
-}
-
-@media (min-width: 992px) {
-  .footer {
-    padding: 5rem 0;
-  }
 }

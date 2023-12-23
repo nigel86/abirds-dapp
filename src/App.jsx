@@ -44,35 +44,6 @@ export default function Home() {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
 
   return (
-    // <main className="main">
-    //   <div className="container">
-    //     <div className="header">
-    //       <h1 className="title">
-    //         Welcome to{" "}
-    //         <span className="gradient-text-0">
-    //           <a
-    //             href="https://thirdweb.com/"
-    //             target="_blank"
-    //             rel="noopener noreferrer"
-    //           >
-    //             thirdweb.
-    //           </a>
-    //         </span>
-    //       </h1>
-
-    //       <div className="connect">
-    //         <ConnectWallet
-    //           dropdownPosition={{
-    //             side: "bottom",
-    //             align: "center",
-    //           }}
-    //         />
-    //       </div>
-    //     </div>
-
-    //   </div>
-    // </main>
-
     <main className="main">
       <nav
         class="navbar navbar-expand-lg navbar-light fixed-top"
@@ -131,18 +102,14 @@ export default function Home() {
         </div>
       </nav>
 
-      <header class="masthead">
+      <header class="masthead-section" id="masthead">
         <div class="container d-flex h-100 align-items-center justify-content-center">
           <div class="d-flex justify-content-center">
             <div class="text-center">
-              <h1 class="mx-auto my-0 text-uppercase">The xBirds</h1>
-              <h6>
-                xBirds is a collection of 1,000 hand-drawn unique NFT birds
-                living on the Optimism blockchain. Your xBird grants access to
-                members-only experience and rewards. Future areas and perks can
-                be unlocked by the community through roadmap activation.
-              </h6>
-
+              <h1 class="mx-auto my-10 text-uppercase">The X-Birds</h1>
+              <br />
+              <br />
+              <br />
               <div class="row">
                 <div class="col">
                   <button
@@ -172,7 +139,7 @@ export default function Home() {
                     }
                     onSubmit={() => toastBootstrap.show()}
                   >
-                    Claim Now
+                    MINT YOURS
                   </Web3Button>
                 </div>
               </div>
@@ -195,7 +162,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
               <h6>
                 {totalCirculatingSupply?.toString()} / {totalCount?.toString()}
                 minted • 36d 5h 2m 54s
@@ -205,99 +171,331 @@ export default function Home() {
         </div>
       </header>
 
-      <section class="about-section" id="about">
+      <section class="story-section" id="story">
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-10">
-              <h2 class="text-white my-5 text-center">The Tale of xBirds</h2>
+              <h2 class="text-white my-5 text-center">The Tale of X-Birds</h2>
               <p class="text-white-50 my-5">
-                Once, the skies thrived with the vibrant 3Dbirds, symbols of joy
-                and unity. Yet, abandoned and forgotten, their world dimmed, and
-                their songs turned somber. Determined to transcend their
-                despair, they transformed into the xbirds, embracing thousands
-                of unique, shadowy forms. Veiled in darkness, each xbird
-                embodies resilience, shaped by trials but standing tall as a
-                testament to adaptation and diversity.
+                In the ethereal realm of Aerendir Eyrie, once a haven for the
+                graceful Moonbirds, a catastrophic event called the Celestial
+                Turbulence shattered their tranquility. Envious of the
+                Moonbirds' radiant beauty, the malevolent Shadow Sirens
+                attacked, pushing the avian community to the brink of
+                extinction. Amidst this chaos emerged Luminarael, a cosmic
+                guardian with ancient wisdom and advanced technology. To save
+                the Moonbirds, Luminarael transformed them into the
+                awe-inspiring X-Birds—half-organic, half-mechanical aviators,
+                each blessed with unique powers forged from celestial energy and
+                cybernetic enhancements.
               </p>
               <p class="text-white-50 my-5">
-                These enigmatic xbirds soar through mysterious skies, a fusion
-                of darkness and empowerment. Their diverse forms echo stories of
-                transformation, inviting the world to celebrate change,
-                individuality, and strength amid adversity. Welcome to the realm
-                of the xbirds, where darkness intertwines with resilience, and
-                every silhouette tells a story of rebirth and reinvention.
+                Now united as defenders of Aerendir Eyrie, the X-Birds soar
+                through rejuvenated skies, safeguarding against remnants of the
+                Celestial Turbulence. Guided by Luminarael's legacy, these
+                cyborg avian beings embark on quests, forge alliances, and
+                navigate a world teeming with ancient mysteries. As they strive
+                to restore balance and harmony to their realm, the X-Birds, each
+                with their distinct identity and powers, stand as a testament to
+                resilience and transformation in the face of cosmic adversity.
+                Through their journey, they seek not only to protect their home
+                but also to discover the true extent of their extraordinary
+                potential and the unity born from their shared struggles.
               </p>
             </div>
           </div>
         </div>
         <img
           class="img-fluid"
-          src="src/assets/img/silhouettes-removebg-half.png"
+          src="src/assets/img/blue-light-sky.png"
           alt="..."
         />
       </section>
 
-      <section class="projects-section bg-light" id="projects">
-        <div class="container px-4 px-lg-5">
-          <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7">
-              <img
-                class="img-fluid mb-3 mb-lg-0"
-                src="src/assets/img/castle.png"
-                alt="..."
-              />
+      <section class="intro-section bg-dark" id="intro">
+        <div class="container my-5 text-white-50">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 class="text-white text-center mb-5">
+                Discover the X-Birds World
+              </h2>
+              <p>
+                X-Birds is a collection of 1,000 hand-drawn unique NFT birds
+                living on the Optimism blockchain. Your xBird grants access to
+                members-only experience and rewards. Future areas and perks can
+                be unlocked by the community through roadmap activation.
+              </p>
             </div>
-            <div class="col-xl-4 col-lg-5">
-              <div class="featured-text text-center text-lg-left">
-                <h4>Wings of Mystery</h4>
-                <p class="text-black-50 mb-0">
-                  Amidst fog and ancient ruins, the xbirds, emblems of change
-                  and fortitude, sweep across the night sky. Their presence, a
-                  harmonious blend of mystery and might, echoes the silent
-                  strength found in the heart of bravery.
+
+            <div class="col-md-4">
+              <div class="row g-4">
+                <div class="col-6">
+                  <img
+                    src="src/assets/nft/1.jpg"
+                    class="img-fluid rounded d-block mx-auto"
+                    alt="Grid 1"
+                  />
+                </div>
+                <div class="col-6">
+                  <img
+                    src="src/assets/nft/2.jpg"
+                    class="img-fluid rounded d-block mx-auto"
+                    alt="Grid 2"
+                  />
+                </div>
+                <div class="col-6">
+                  <img
+                    src="src/assets/nft/3.jpg"
+                    class="img-fluid rounded d-block mx-auto"
+                    alt="Grid 3"
+                  />
+                </div>
+                <div class="col-6">
+                  <img
+                    src="src/assets/nft/4.jpg"
+                    class="img-fluid rounded d-block mx-auto"
+                    alt="Grid 4"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="weapon-section bg-dark" id="weapon">
+        <div class="container my-5 text-white-50">
+          <div class="row">
+            <div class="col">
+              <h2 class="text-white text-center mb-5">The Powers Of X</h2>
+            </div>
+          </div>
+          <div class="row my-5 justify-content-center">
+            <div class="col-md-2 col-sm-4 mb-4">
+              <img
+                src="src/assets/img/weapon1.jpg"
+                alt="X-Bird Power 1"
+                class="img-fluid"
+              />
+              <div class="caption text-center mt-2">
+                <p class="mb-1 text-secondary">Celestial Wing Blades</p>
+                <p class="mb-0 text-secondary fw-light">Secret Rare</p>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 mb-4">
+              <img
+                src="src/assets/img/weapon2.jpg"
+                alt="X-Bird Power 2"
+                class="img-fluid"
+              />
+              <div class="caption text-center mt-2">
+                <p class="mb-1 text-secondary">Resonant Energy Shield</p>
+                <p class="mb-0 text-secondary fw-light">Ultra Rare</p>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 mb-4">
+              <img
+                src="src/assets/img/weapon3.jpg"
+                alt="X-Bird Power 3"
+                class="img-fluid"
+              />
+              <div class="caption text-center mt-2">
+                <p class="mb-1 text-secondary">Stellar Cannon Blaster</p>
+                <p class="mb-0 text-secondary fw-light">Rare</p>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 mb-4">
+              <img
+                src="src/assets/img/weapon4.jpg"
+                alt="X-Bird Power 4"
+                class="img-fluid"
+              />
+              <div class="caption text-center mt-2">
+                <p class="mb-1 text-secondary">Mind's Eye Gauntlet</p>
+                <p class="mb-0 text-secondary fw-light">Uncommon</p>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 mb-4">
+              <img
+                src="src/assets/img/weapon5.jpg"
+                alt="X-Bird Power 5"
+                class="img-fluid"
+              />
+              <div class="caption text-center mt-2">
+                <p class="mb-1 text-secondary">Harmonic Prism</p>
+                <p class="mb-0 text-secondary fw-light">Common</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section bg-dark" id="timeline">
+        <div class="container my-5 text-white">
+          <div class="row text-center justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+              <h2 class="my-5 font-weight-bold">X-Birds Evolution</h2>
+              <p class="my-5 text-white-50">
+                We’re very proud of the path we’ve taken. Explore the history
+                that made us who we are today.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div
+                class="timeline-steps aos-init aos-animate"
+                data-aos="fade-up"
+              >
+                <div class="timeline-step">
+                  <div
+                    class="timeline-content"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    data-placement="top"
+                    title=""
+                    data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-original-title="2003"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="h6 mt-3 mb-1">25 Mar '24</p>
+                    <p class="h6 text-white-50 mb-0 mb-lg-0">SNAPSHOT</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div
+                    class="timeline-content"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    data-placement="top"
+                    title=""
+                    data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-original-title="2004"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="h6 mt-3 mb-1">29 Mar '24</p>
+                    <p class="h6 text-white-50 mb-0 mb-lg-0">WHITELIST SALE</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div
+                    class="timeline-content"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    data-placement="top"
+                    title=""
+                    data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-original-title="2005"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="h6 mt-3 mb-1">30 Mar '24</p>
+                    <p class="h6 text-white-50 mb-0 mb-lg-0">PUBLIC SALE</p>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <div
+                    class="timeline-content"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    data-placement="top"
+                    title=""
+                    data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-original-title="2010"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="h6 mt-3 mb-1">1 Apr '24</p>
+                    <p class="h6 text-white-50 mb-0 mb-lg-0">REVEAL</p>
+                  </div>
+                </div>
+                <div class="timeline-step mb-0">
+                  <div
+                    class="timeline-content"
+                    data-toggle="popover"
+                    data-trigger="hover"
+                    data-placement="top"
+                    title=""
+                    data-content="And here's some amazing content. It's very engaging. Right?"
+                    data-original-title="2020"
+                  >
+                    <div class="inner-circle"></div>
+                    <p class="h6 mt-3 mb-1">Q2 '24</p>
+                    <p class="h6 text-white-50 mb-0 mb-lg-0">NEXT MILESTONE</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team-section bg-dark" id="team">
+        <div class="container text-white my-5">
+          <div class="row justify-content-center">
+            <div class="col">
+              <div class="section_heading text-center wow fadeInUp">
+                <h3 class="my-5">
+                  Our Creative <span> Team</span>
+                </h3>
+                <p class="my-5 text-white-50">
+                  Discover the masterminds behind X-BIRDS, crafting innovation
+                  through creativity and imagination.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6">
-              <img class="img-fluid" src="src/assets/img/sun.jpg" alt="..." />
-            </div>
-            <div class="col-lg-6">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-white">Misty</h4>
-                    <p class="mb-0 text-white-50">
-                      An example of where you can put an image of a project, or
-                      anything else, along with a description.
-                    </p>
-                  </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="profile wow fadeInUp">
+                <div class="profile_thumb">
+                  <img src="src/assets/nft/1.jpg" class="img-fluid" alt="" />
+                </div>
+                <div class="profile-detail">
+                  <h6>mattgene.eth</h6>
+                  <p class="role">Lead Designer</p>
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-medium"></i>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6">
-              <img
-                class="img-fluid"
-                src="src/assets/img/demo-image-02.jpg"
-                alt="..."
-              />
+            <div class="col-md-4">
+              <div class="profile wow fadeInUp">
+                <div class="profile_thumb">
+                  <img src="src/assets/nft/2.jpg" class="img-fluid" alt="" />
+                </div>
+                <div class="profile-detail">
+                  <h6>davidsfh40542.eth</h6>
+                  <p class="role">Content Director</p>
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-discord"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 order-lg-first">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-right">
-                    <h4 class="text-white">Mountains</h4>
-                    <p class="mb-0 text-white-50">
-                      Another example of a project with its respective
-                      description. These sections work well responsively as
-                      well!
-                    </p>
-                  </div>
+            <div class="col-md-4">
+              <div class="profile wow fadeInUp">
+                <div class="profile_thumb">
+                  <img src="src/assets/nft/3.jpg" class="img-fluid" alt="" />
+                </div>
+                <div class="profile-detail">
+                  <h6>nigel86.eth</h6>
+                  <p class="role">Developer</p>{" "}
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a class="mx-1 text-white" href="#">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -305,78 +503,378 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="roadmap-section bg-light" id="roadmap">
-        <div class="container mt-4 mb-4">
-          <h2>NFT Roadmap</h2>
-        </div>
-        <div class="container">
+      <section class="faq-section bg-dark" id="faq">
+        <div class="container text-white my-5">
           <div class="row">
-            <div class="col-sm-4 mb-3">
-              <div class="card">
-                <img
-                  src="src/assets/img/demo-image-02.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-img-overlay">
-                  <p class="card-text">
-                    <small class="live-text text-body-secondary">Live</small>
-                  </p>
-                  <h5 class="card-title text-white">Be Origin</h5>
-                  <p class="card-text text-white-50">Mint to become the OG.</p>
+            <div class="col-md-2"> </div>
+            <div class="col-md-8">
+              <h1 class="text-center my-5">F.A.Q.</h1>
+
+              <div class="accordion" id="accordionExample">
+                {/* 1 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button fs-6"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      HOW MANY PEOPLE OF CAPTAIN LASERHAWK: A BLOOD DRAGON REMIX
+                      - THE SANDBOX AVATAR COLLECTION ARE THERE?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 1</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      HOW DOES RARITY WORK?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 2</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      WHERE DO I GET MY AVATAR
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 3</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 4 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      WHAT IS AN ALLOWLIST?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 4</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 5 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFive">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      WHEN IS THE SALE AND HOW MANY AVATARS CAN I BUY?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 5</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 6 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSix">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="collapseSix"
+                    >
+                      HOW MUCH SHOULD I EXPECT TO PAY FOR ONE AVATAR NFT?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 6</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+                {/* 7 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingSeven">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="collapseSeven"
+                    >
+                      HOW DO I GET ALLOW LISTED?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSeven"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 7</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 8 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingEight">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseEight"
+                      aria-expanded="false"
+                      aria-controls="collapseEight"
+                    >
+                      HOW CAN I JOIN THE ALLOW LIST FOR HEYMINT?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseEight"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingEight"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 8</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 9 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingNine">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseNine"
+                      aria-expanded="false"
+                      aria-controls="collapseNine"
+                    >
+                      WHEN WILL THE ALLOW LIST FOR HEYMINT.XYZ BE OPENED?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseNine"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingNine"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 9</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 10 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTen">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTen"
+                      aria-expanded="false"
+                      aria-controls="collapseTen"
+                    >
+                      HOW MANY SPOTS ARE AVAILABLE ON THE ALLOW LIST?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTen"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTen"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 10</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 11 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingEleven">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseEleven"
+                      aria-expanded="false"
+                      aria-controls="collapseEleven"
+                    >
+                      WHEN WILL THE ALLOW LIST FOR HEYMINT CLOSE?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseEleven"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingEleven"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 11</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 12 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwelve">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwelve"
+                      aria-expanded="false"
+                      aria-controls="collapseTwelve"
+                    >
+                      CAN I ACCESS HEYMINT.XYZ THROUGH ANY OTHER MEANS EXCEPT
+                      FOR THE LINK SHARED BY THE SANDBOX?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwelve"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwelve"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 12</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
+                </div>
+
+                {/* 13 */}
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThirteen">
+                    <button
+                      class="accordion-button fs-6 collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThirteen"
+                      aria-expanded="false"
+                      aria-controls="collapseThirteen"
+                    >
+                      HOW DO I KNOW IF I'M ALLOW LISTED?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThirteen"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThirteen"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body fs-6">
+                      <strong>Answer to Question 13</strong> - Placeholder text
+                      for the answer.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4 mb-3">
-              <div class="card">
-                <img
-                  src="src/assets/img/demo-image-02.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-img-overlay">
-                  <p class="card-text">
-                    <small class="soon-text text-body-secondary">
-                      Coming soon
-                    </small>
-                  </p>
-                  <h5 class="card-title text-white">Official Mint</h5>
-                  <p class="card-text text-white-50">
-                    Public sale for the 1st appearence aBirds.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-4 mb-3">
-              <div class="card">
-                <img
-                  src="src/assets/img/demo-image-02.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-img-overlay">
-                  <p class="card-text">
-                    <small class="soon-text text-body-secondary">
-                      Coming soon
-                    </small>
-                  </p>
-                  <h5 class="card-title text-white">Power Release</h5>
-                  <p class="card-text text-white-50">
-                    Be surprised by the aBirds power.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div class="col-md-2"> </div>
           </div>
         </div>
       </section>
 
       <section class="signup-section" id="signup">
-        <div class="container px-4 px-lg-5">
+        <div class="container">
           <div class="row gx-4 gx-lg-5">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
               <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-              <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+              <h2 class="text-white mb-5">Join our Forest</h2>
 
               {/*
                         <!-- * * * * * * * * * * * * * * *-->
@@ -409,7 +907,7 @@ export default function Home() {
                       id="submitButton"
                       type="submit"
                     >
-                      Notify Me!
+                      Notify Me
                     </button>
                   </div>
                 </div>
@@ -448,58 +946,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section class="contact-section bg-black">
-        <div class="container px-4 px-lg-5">
-          <div class="row gx-4 gx-lg-5">
-            <div class="col-md-4 mb-3 mb-md-0">
-              <div class="card py-4 h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                  <h4 class="text-uppercase m-0">Forest Location</h4>
-                  <hr class="my-4 mx-auto" />
-                  <div class="small text-black-50">Sandbox Land x=1, y=1</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-              <div class="card py-4 h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-envelope text-primary mb-2"></i>
-                  <h4 class="text-uppercase m-0">Email</h4>
-                  <hr class="my-4 mx-auto" />
-                  <div class="small text-black-50">
-                    <a href="#!">cs@abirds.com</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-              <div class="card py-4 h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                  <h4 class="text-uppercase m-0">Phone</h4>
-                  <hr class="my-4 mx-auto" />
-                  <div class="small text-black-50">+1 (555) 902-8832</div>
-                </div>
-              </div>
-            </div>
+      <footer class="footer bg-black small text-center text-white-50 text-center text-lg-start ">
+        <div class="d-flex justify-content-center justify-content-lg-between p-4">
+          <div class="me-5">
+            <span>
+              Buidl with <i class="fa-solid fa-heart"></i> on
+              <img
+                class="mx-2"
+                src="src/assets/logo/op.svg"
+                alt="External Logo"
+                width="100"
+              />
+            </span>
           </div>
-          <div class="social d-flex justify-content-center">
-            <a class="mx-2" href="#!">
-              <i class="fab fa-twitter"></i>
+          <div>
+            <a href="" class="me-4 text-reset">
+              <img
+                class="mx-2"
+                src="src/assets/logo/etherscan.svg"
+                alt="External Logo"
+                width="15"
+              />
             </a>
-            <a class="mx-2" href="#!">
-              <i class="fab fa-facebook-f"></i>
+            <a href="" class="me-4 text-reset">
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a class="mx-2" href="#!">
-              <i class="fab fa-github"></i>
+            <a href="" class="me-4 text-reset">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fa-brands fa-github"></i>
             </a>
           </div>
         </div>
-      </section>
-
-      <footer class="footer bg-black small text-center text-white-50">
-        <div class="container px-4 px-lg-5">Copyright &copy; ABIRDS 2023</div>
+        <div class="container text-center p-4">
+          <p class="fw-bold">x-birds</p> Copyright © 2023-2024 All Rights
+          Reserved
+        </div>
       </footer>
 
       {/* Navigation
